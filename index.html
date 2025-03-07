@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lavender Weather</title>
+  </head>
+  <body>
+    <header>
+      <form>
+        <input
+          type="search"
+          placeholder="Enter your city..."
+          required
+          minlength="2"
+        />
+        <input type="submit" value="search" />
+      </form>
+    </header>
+    <main>
+      <div class="presentWeather">
+        <div class="presentCity">
+          <h1 id="present-city">City Name</h1>
+          <div class="presentCityDetails">
+            <div id="present-date">0/00</div>
+            <div id="present-conditions">...</div>
+            <div id="present-humidity">Humidity: %</div>
+            <div id="present-wind">Wind: km/h</div>
+          </div>
+        </div>
+        <div class="presentTemperature">
+          <div id="present-temperature-icon">💮</div>
+          <div id="present-temperature-value">🍥</div>
+          <div id="present-temperature-unit">°C</div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        This project was coded by
+        <a href="https://github.com/Nova-Ndlovu" target="_blank">Nova Ndlovu</a>
+        and is
+        <a
+          href="https://github.com/Nova-Ndlovu/Lavender-Weather-App"
+          target="_blank"
+        >
+          on GitHub</a
+        >
+        and
+        <a
+          href="https://app.netlify.com/teams/nova-ndlovu/sites"
+          target="_blank"
+          >hosted on Netlify</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
