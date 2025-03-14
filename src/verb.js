@@ -5,13 +5,13 @@ function displayTemperature(response) {
   thisCity.innerHTML = response.data.city;
   displayTemp.innerHTML = temperature;
   let icon = document.querySelector("#present-temperature-icon");
-  icon.innerHTML = response.data.condition.icon;
+  icon.innerHTML = response.data.condition.icon_url;
   let conditions = document.querySelector("#present-conditions");
-  conditions.innerHTML = response.data.condition;
+  conditions.innerHTML = response.data.condition.description;
   let humidity = document.querySelector("#present-humidity");
-  humidity.innerHTML = `{response.data.temperature.humidity} %`;
+  humidity.innerHTML = `${response.data.temperature.humidity}%`;
   let wind = document.querySelector("#present-wind");
-  wind.innerHTML = `{respnse.data.wind.speed} km/h`;
+  wind.innerHTML = `${response.data.wind.speed} km/h`;
 }
 
 function search(event) {
@@ -41,24 +41,29 @@ function formattedDate(thisDay) {
   let day = weekDays[thisDay.getDay()];
 
   let months = [
-    "January",
-    "Febuary",
-    "March",
-    "April",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
     "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
   let month = months[thisDay.getMonth()];
 
-  presentDate.innerHTML = `${hours}:${minutes} ${day} ${month} ${date}`;
+  presentDate.innerHTML = `${day} ${date} ${month} ${hours}:${minutes}`;
 
-  return `${hours}:${minutes}<br />${day}<br />${month} ${date}`;
+  return `${day}<br />${date} ${month}<br />${hours}:${minutes}`;
+}
+
+function revealMenu() {
+  let menu = document.querySelector("#info-drop");
+  menu.classList.toggle("reveal");
 }
 
 let citySearch = document.querySelector("#city-search");

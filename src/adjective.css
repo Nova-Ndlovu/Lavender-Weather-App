@@ -68,12 +68,18 @@ header {
 }
 
 main {
-  padding: 2px 0;
+  padding: 5px 0;
+  margin: 0 auto;
 }
 
 .present-weather {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  max-width: min-content;
+  field-sizing: content;
+  overflow: scroll;
 }
 
 .present-city {
@@ -111,7 +117,7 @@ main {
 
 .forecast:hover + .hover-display {
   display: block;
-  font-size: 15px;
+  font-size: 16px;
   text-shadow: 0 0 7px rgb(176, 200, 154);
 }
 
@@ -121,6 +127,7 @@ main {
   justify-content: center;
   left: 20px;
   top: 35px;
+  z-index: 1;
 }
 
 .left-display-disc {
@@ -135,6 +142,10 @@ main {
 }
 
 .left-display-disc:hover {
+  background-image: radial-gradient(
+    rgb(176, 200, 154, 0.4) 0%,
+    rgb(255, 255, 255) 100%
+  );
   box-shadow: 0 0 20px rgb(125, 88, 132);
   cursor: pointer;
 }
@@ -145,13 +156,19 @@ main {
   font-size: 20px;
 }
 
+#present-date:hover {
+  transform: scale(1.15);
+}
+
 #present-conditions {
   font-size: 15px;
 }
 
 .central-display-disc {
-  background-color: rgb(255, 255, 255);
   position: relative;
+  background-color: rgb(255, 255, 255);
+  background-image: url("${icon}");
+  background-size: contain;
   border: 7px solid rgb(193, 216, 172, 0.8);
   box-shadow: 0 0 5px rgb(125, 88, 132, 0.6) inset, 0 0 10px rgb(87, 29, 110);
   border-radius: 180px;
@@ -163,6 +180,10 @@ main {
 }
 
 .central-display-disc:hover {
+  background-image: radial-gradient(
+    rgb(176, 200, 154, 0.4) 0%,
+    rgb(255, 255, 255) 100%
+  );
   box-shadow: 0 0 20px rgb(125, 88, 132);
   cursor: pointer;
 }
@@ -195,18 +216,30 @@ main {
 }
 
 .right-display-disc:hover {
+  background-image: radial-gradient(
+    rgb(176, 200, 154, 0.4) 0%,
+    rgb(255, 255, 255) 100%
+  );
   box-shadow: 0 0 20px rgb(125, 88, 132);
   cursor: pointer;
 }
 
 #present-humidity {
   position: relative;
-  top: 15px;
+  font-size: 20px;
+}
+
+#present-humidity:hover {
+  transform: scale(1.2);
 }
 
 #present-wind {
   position: relative;
-  top: 15px;
+  font-size: 20px;
+}
+
+#present-wind:hover {
+  transform: scale(1.2);
 }
 
 .footer-notes {
@@ -230,12 +263,43 @@ main {
 .info-dropdown-content {
   display: none;
   position: absolute;
+  text-decoration: none;
   text-align: left;
   font-size: 15px;
   right: 0;
   bottom: 43px;
 }
 
+.chibi-detail {
+  text-decoration: none;
+  transition: all 200ms ease-in;
+}
+
+.chibi-detail:hover {
+  background-image: radial-gradient(
+    ellipse,
+    rgb(176, 200, 154, 0.6) 0%,
+    rgb(67, 23, 85, 0.3) 100%
+  );
+  border: none;
+  border-radius: 180px;
+  padding: 2px;
+  cursor: pointer;
+}
+
 .reveal {
   display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .present-weather
+    .present-city
+    .present-city-details
+    .forecast
+    .left-display-disc
+    .central-display-disc
+    .right-display-disc
+    .footer-notes {
+    width: min-content;
+  }
 }
