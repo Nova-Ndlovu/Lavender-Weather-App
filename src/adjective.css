@@ -12,10 +12,10 @@ body {
   display: block;
   justify-content: center;
   border-top-color: rgb(87, 29, 110);
-  border: solid 15px rgb(193, 216, 172);
+  border: double 15px rgb(193, 216, 172);
   border-radius: 180px;
-  max-width: 650px;
-  max-height: 250px;
+  max-width: 675px;
+  max-height: 265px;
   margin: 60px auto;
   padding: 20px;
   box-shadow: 0 0 10px 12px rgb(160, 137, 169, 0.7) inset,
@@ -32,15 +32,11 @@ header {
   justify-content: center;
   margin: 0 auto;
   padding: 15px;
-  background-image: radial-gradient(
-    ellipse,
-    rgb(255, 255, 255) 0%,
-    rgba(176, 200, 154, 0.8) 100%
-  );
+  background-color: rgb(255, 255, 255);
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
   border: none;
-  box-shadow: 0 0 5px rgb(87, 29, 110);
+  box-shadow: 0 0 10px rgb(176, 200, 154) inset, 0 0 10px rgb(176, 200, 154);
   color: rgb(87, 29, 110, 0.4);
   height: 30px;
   width: 75%;
@@ -49,7 +45,7 @@ header {
 }
 
 .city-search-input:hover {
-  box-shadow: 0 0 10px rgb(193, 216, 172);
+  box-shadow: 0 0 10px rgb(176, 200, 154) inset, 0 0 15px rgb(67, 23, 85);
   cursor: pointer;
 }
 
@@ -59,7 +55,7 @@ header {
   border: none;
   box-shadow: 0 0 5px rgb(97, 116, 96);
   background-color: rgb(125, 88, 132);
-  color: rgb(193, 216, 172, 0.8);
+  color: rgb(193, 216, 172);
   height: 20px;
   width: 45%;
   font-size: 16px;
@@ -90,16 +86,16 @@ main {
   color: rgb(87, 29, 110);
   text-shadow: 0 0 20px rgb(225, 255, 197);
   position: relative;
-  font-size: 20px;
+  font-size: 21px;
   margin: 0 auto;
-  top: -29px;
+  top: -27px;
 }
 
 .present-city-details {
   display: flex;
   justify-content: space-evenly;
   position: relative;
-  bottom: 34px;
+  bottom: 24px;
 }
 
 .forecast {
@@ -111,8 +107,8 @@ main {
   border: 7px solid rgb(193, 216, 172, 0.8);
   box-shadow: 0 0 5px rgb(125, 88, 132, 0.6) inset, 0 0 10px rgb(87, 29, 110);
   border-radius: 180px;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   font-size: 25px;
   transition: all 400ms ease-in-out;
 }
@@ -125,7 +121,7 @@ main {
 .forecast:hover + .hover-display {
   display: block;
   color: rgb(224, 250, 200);
-  font-size: 16px;
+  font-size: 17px;
   text-shadow: 0 0 10px rgb(87, 29, 110);
 }
 
@@ -147,8 +143,8 @@ main {
   border: 7px solid rgb(193, 216, 172, 0.8);
   box-shadow: 0 0 5px rgb(125, 88, 132, 0.6) inset, 0 0 10px rgb(87, 29, 110);
   border-radius: 180px;
-  width: 110px;
-  height: 110px;
+  width: 112px;
+  height: 112px;
   transition: all 400ms ease-in-out;
 }
 
@@ -163,7 +159,7 @@ main {
 
 #present-date {
   position: relative;
-  top: 5px;
+  top: 10px;
   font-size: 20px;
 }
 
@@ -185,8 +181,8 @@ main {
   border: 7px solid rgb(193, 216, 172, 0.8);
   box-shadow: 0 0 5px rgb(125, 88, 132, 0.8) inset, 0 0 10px rgb(87, 29, 110);
   border-radius: 180px;
-  width: 135px;
-  height: 135px;
+  width: 137px;
+  height: 137px;
   bottom: 25px;
   font-size: 20px;
   transition: all 400ms ease-in-out;
@@ -212,20 +208,18 @@ main {
 
 #present-temperature-unit {
   position: relative;
-  top: -18px;
+  top: -6px;
   font-size: 15px;
 }
 
 #present-temperature-icon {
   position: relative;
   justify-content: center;
-  width: 92px;
-  height: 30px;
-  border-bottom-left-radius: 180px;
-  border-bottom-right-radius: 180px;
-  top: -22px;
-  left: 22px;
-  background-color: transparent;
+  width: 137px;
+  height: 137px;
+  border-radius: 180px;
+  top: -124px;
+  z-index: -1;
 }
 
 .right-display-disc {
@@ -237,8 +231,8 @@ main {
   border: 7px solid rgb(193, 216, 172, 0.8);
   box-shadow: 0 0 5px rgb(125, 88, 132, 0.6) inset, 0 0 10px rgb(87, 29, 110);
   border-radius: 180px;
-  width: 110px;
-  height: 110px;
+  width: 112px;
+  height: 112px;
   font-size: 16px;
   transition: all 400ms ease-in-out;
 }
@@ -252,9 +246,16 @@ main {
   cursor: pointer;
 }
 
+.right-display-disc .adjust {
+  position: relative;
+  top: 14px;
+  font-size: 18px;
+}
+
 #present-humidity {
   position: relative;
   font-size: 20px;
+  top: 14px;
 }
 
 #present-humidity:hover {
@@ -264,6 +265,7 @@ main {
 #present-wind {
   position: relative;
   font-size: 20px;
+  top: 18px;
 }
 
 #present-wind:hover {
@@ -280,8 +282,8 @@ main {
   box-shadow: 0 0 5px rgb(125, 88, 132, 0.6) inset, 0 0 10px rgb(87, 29, 110);
   border-radius: 180px;
   border-radius: 180px;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   font-size: 25px;
   transition: all 400ms ease-in-out;
 }
@@ -297,7 +299,7 @@ main {
   text-decoration: none;
   text-align: left;
   font-size: 15px;
-  right: 0;
+  right: 2px;
   bottom: 43px;
 }
 
