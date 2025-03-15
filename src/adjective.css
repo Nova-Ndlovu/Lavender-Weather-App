@@ -1,24 +1,24 @@
 body {
-  background-color: rgb(176, 200, 154);
+  background-color: rgb(255, 255, 255);
   color: rgb(67, 23, 85);
   text-align: center;
   font-family: monospace;
 }
 
 .weather-app {
-  background-image: url("media\Lavender AM.jpeg");
+  background-color: rgba(125, 88, 132, 0.5);
   background-size: contain;
   background-repeat: round;
   display: block;
   justify-content: center;
   border-top-color: rgb(87, 29, 110);
-  border: double 15px rgb(125, 88, 132);
+  border: solid 15px rgb(193, 216, 172);
   border-radius: 180px;
   max-width: 650px;
   max-height: 250px;
   margin: 60px auto;
   padding: 20px;
-  box-shadow: 0 0 10px 12px rgb(160, 137, 169, 0.6) inset,
+  box-shadow: 0 0 10px 12px rgb(160, 137, 169, 0.7) inset,
     0 0 30px rgb(67, 23, 85);
 }
 
@@ -32,7 +32,11 @@ header {
   justify-content: center;
   margin: 0 auto;
   padding: 15px;
-  background-color: rgb(193, 216, 172, 0.8);
+  background-image: radial-gradient(
+    ellipse,
+    rgb(255, 255, 255) 0%,
+    rgba(176, 200, 154, 0.8) 100%
+  );
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
   border: none;
@@ -45,7 +49,7 @@ header {
 }
 
 .city-search-input:hover {
-  box-shadow: 0 0 10px rgb(125, 88, 132);
+  box-shadow: 0 0 10px rgb(193, 216, 172);
   cursor: pointer;
 }
 
@@ -63,7 +67,7 @@ header {
 }
 
 .city-search-button:hover {
-  box-shadow: 0 0 15px rgb(125, 88, 132);
+  box-shadow: 0 0 15px rgb(67, 23, 85);
   cursor: pointer;
 }
 
@@ -84,7 +88,7 @@ main {
 
 .present-city {
   color: rgb(87, 29, 110);
-  text-shadow: 0 0 20px rgb(193, 216, 172);
+  text-shadow: 0 0 20px rgb(225, 255, 197);
   position: relative;
   font-size: 20px;
   margin: 0 auto;
@@ -99,7 +103,10 @@ main {
 }
 
 .forecast {
-  background-color: rgb(255, 255, 255);
+  background-image: radial-gradient(
+    rgb(255, 255, 255) 0%,
+    rgba(176, 200, 154, 0.8) 100%
+  );
   position: relative;
   border: 7px solid rgb(193, 216, 172, 0.8);
   box-shadow: 0 0 5px rgb(125, 88, 132, 0.6) inset, 0 0 10px rgb(87, 29, 110);
@@ -111,14 +118,15 @@ main {
 }
 
 .forecast:hover {
-  box-shadow: 0 0 20px rgb(125, 88, 132);
+  box-shadow: 0 0 20px rgb(193, 216, 172);
   cursor: pointer;
 }
 
 .forecast:hover + .hover-display {
   display: block;
+  color: rgb(224, 250, 200);
   font-size: 16px;
-  text-shadow: 0 0 7px rgb(176, 200, 154);
+  text-shadow: 0 0 10px rgb(87, 29, 110);
 }
 
 .hover-display {
@@ -132,7 +140,10 @@ main {
 
 .left-display-disc {
   position: relative;
-  background-color: rgb(255, 255, 255);
+  background-image: radial-gradient(
+    rgb(255, 255, 255) 0%,
+    rgba(176, 200, 154, 0.8) 100%
+  );
   border: 7px solid rgb(193, 216, 172, 0.8);
   box-shadow: 0 0 5px rgb(125, 88, 132, 0.6) inset, 0 0 10px rgb(87, 29, 110);
   border-radius: 180px;
@@ -146,7 +157,7 @@ main {
     rgb(176, 200, 154, 0.4) 0%,
     rgb(255, 255, 255) 100%
   );
-  box-shadow: 0 0 20px rgb(125, 88, 132);
+  box-shadow: 0 0 20px rgb(193, 216, 172);
   cursor: pointer;
 }
 
@@ -166,10 +177,13 @@ main {
 
 .central-display-disc {
   position: relative;
-  background-color: rgb(255, 255, 255);
+  background-image: radial-gradient(
+    rgb(255, 255, 255) 0%,
+    rgba(176, 200, 154, 0.8) 100%
+  );
   background-size: contain;
   border: 7px solid rgb(193, 216, 172, 0.8);
-  box-shadow: 0 0 5px rgb(125, 88, 132, 0.6) inset, 0 0 10px rgb(87, 29, 110);
+  box-shadow: 0 0 5px rgb(125, 88, 132, 0.8) inset, 0 0 10px rgb(87, 29, 110);
   border-radius: 180px;
   width: 135px;
   height: 135px;
@@ -183,7 +197,7 @@ main {
     rgb(176, 200, 154, 0.4) 0%,
     rgb(255, 255, 255) 100%
   );
-  box-shadow: 0 0 20px rgb(125, 88, 132);
+  box-shadow: 0 0 20px rgb(193, 216, 172);
   cursor: pointer;
 }
 
@@ -204,12 +218,21 @@ main {
 
 #present-temperature-icon {
   position: relative;
-  font-size: 20px;
-  top: -18px;
+  justify-content: center;
+  width: 92px;
+  height: 30px;
+  border-bottom-left-radius: 180px;
+  border-bottom-right-radius: 180px;
+  top: -22px;
+  left: 22px;
+  background-color: transparent;
 }
 
 .right-display-disc {
-  background-color: rgb(255, 255, 255);
+  background-image: radial-gradient(
+    rgb(255, 255, 255) 0%,
+    rgba(176, 200, 154, 0.8) 100%
+  );
   position: relative;
   border: 7px solid rgb(193, 216, 172, 0.8);
   box-shadow: 0 0 5px rgb(125, 88, 132, 0.6) inset, 0 0 10px rgb(87, 29, 110);
@@ -225,7 +248,7 @@ main {
     rgb(176, 200, 154, 0.4) 0%,
     rgb(255, 255, 255) 100%
   );
-  box-shadow: 0 0 20px rgb(125, 88, 132);
+  box-shadow: 0 0 20px rgb(193, 216, 172);
   cursor: pointer;
 }
 
@@ -248,7 +271,10 @@ main {
 }
 
 .footer-notes {
-  background-color: rgb(255, 255, 255);
+  background-image: radial-gradient(
+    rgb(255, 255, 255) 0%,
+    rgba(176, 200, 154, 0.8) 100%
+  );
   position: relative;
   border: 7px solid rgb(193, 216, 172, 0.8);
   box-shadow: 0 0 5px rgb(125, 88, 132, 0.6) inset, 0 0 10px rgb(87, 29, 110);
@@ -261,7 +287,7 @@ main {
 }
 
 .footer-notes:hover {
-  box-shadow: 0 0 20px rgb(125, 88, 132);
+  box-shadow: 0 0 20px rgb(193, 216, 172);
   cursor: pointer;
 }
 
@@ -276,6 +302,7 @@ main {
 }
 
 .chibi-detail {
+  color: rgb(224, 250, 200);
   text-decoration: none;
   transition: all 200ms ease-in;
 }
@@ -283,10 +310,11 @@ main {
 .chibi-detail:hover {
   background-image: radial-gradient(
     ellipse,
-    rgb(176, 200, 154, 0.6) 0%,
-    rgb(67, 23, 85, 0.3) 100%
+    rgb(67, 23, 85, 0.3) 0%,
+    rgb(176, 200, 154, 0.6) 80%
   );
   border: none;
+  box-shadow: 0 0 14px rgb(193, 216, 172);
   border-radius: 180px;
   padding: 2px;
   cursor: pointer;

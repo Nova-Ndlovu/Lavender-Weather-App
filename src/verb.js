@@ -1,8 +1,8 @@
 function displayTemperature(response) {
-  let displayTemp = document.querySelector("#present-temperature-value");
-  let temperature = Math.round(response.data.temperature.current);
   let thisCity = document.querySelector("#present-city");
   thisCity.innerHTML = response.data.city;
+  let displayTemp = document.querySelector("#present-temperature-value");
+  let temperature = Math.round(response.data.temperature.current);
   displayTemp.innerHTML = temperature;
   let icon = document.querySelector("#present-temperature-icon");
   icon.innerHTML = response.data.condition.icon_url;
