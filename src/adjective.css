@@ -6,7 +6,7 @@ body {
 }
 
 .weather-app {
-  background-image: url("C:\Users\Phi Ndlovu\Documents\GitHub\Lavender-Weather-App\media\Lavender AM.jpeg");
+  background-image: url("media\Lavender AM.jpeg");
   background-size: contain;
   background-repeat: round;
   display: block;
