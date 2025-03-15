@@ -188,7 +188,7 @@ main {
 }
 
 #present-temperature-value {
-  font-size: 100px;
+  font-size: 90px;
   transition: all 400ms ease-in-out;
 }
 
@@ -198,8 +198,14 @@ main {
 
 #present-temperature-unit {
   position: relative;
-  top: -10px;
+  top: -18px;
   font-size: 15px;
+}
+
+#present-temperature-icon {
+  position: relative;
+  font-size: 20px;
+  top: -18px;
 }
 
 .right-display-disc {
