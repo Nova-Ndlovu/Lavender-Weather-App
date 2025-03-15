@@ -4,8 +4,6 @@ function displayTemperature(response) {
   let thisCity = document.querySelector("#present-city");
   thisCity.innerHTML = response.data.city;
   displayTemp.innerHTML = temperature;
-  let icon = document.querySelector("#present-temperature-icon");
-  icon.innerHTML = response.data.condition.icon_url;
   let conditions = document.querySelector("#present-conditions");
   conditions.innerHTML = response.data.condition.description;
   let humidity = document.querySelector("#present-humidity");
