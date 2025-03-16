@@ -175,7 +175,7 @@ main {
 .central-display-disc {
   position: relative;
   background-image: radial-gradient(
-    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0) 0%,
     rgba(176, 200, 154, 0.8) 100%
   );
   background-size: contain;
@@ -216,6 +216,10 @@ main {
 #present-temperature-icon {
   position: relative;
   justify-content: center;
+  background-image: radial-gradient(
+    rgb(255, 255, 255) 0%,
+    rgba(176, 200, 154, 0.8) 100%
+  );
   width: 140px;
   height: 140px;
   border-radius: 180px;
