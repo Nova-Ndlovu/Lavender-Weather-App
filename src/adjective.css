@@ -6,7 +6,7 @@ body {
 }
 
 .weather-app {
-  background-color: rgba(125, 88, 132, 0.5);
+  background-color: rgba(125, 88, 132, 0.3);
   background-size: contain;
   background-repeat: round;
   display: block;
@@ -150,9 +150,10 @@ main {
 
 .left-display-disc:hover {
   background-image: radial-gradient(
-    rgb(176, 200, 154, 0.4) 0%,
+    rgb(176, 200, 154, 0.1) 0%,
     rgb(255, 255, 255) 100%
   );
+
   box-shadow: 0 0 20px rgb(193, 216, 172);
   cursor: pointer;
 }
@@ -174,7 +175,7 @@ main {
 .central-display-disc {
   position: relative;
   background-image: radial-gradient(
-    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0.6) 0%,
     rgba(176, 200, 154, 0.8) 100%
   );
   background-size: contain;
@@ -185,12 +186,12 @@ main {
   height: 137px;
   bottom: 25px;
   font-size: 20px;
-  transition: all 400ms ease-in-out;
+  transition: all 350ms ease-in-out;
 }
 
 .central-display-disc:hover {
   background-image: radial-gradient(
-    rgb(176, 200, 154, 0.4) 0%,
+    rgb(176, 200, 154, 0.1) 0%,
     rgb(255, 255, 255) 100%
   );
   box-shadow: 0 0 20px rgb(193, 216, 172);
@@ -215,10 +216,11 @@ main {
 #present-temperature-icon {
   position: relative;
   justify-content: center;
-  width: 137px;
-  height: 137px;
+  width: 140px;
+  height: 140px;
   border-radius: 180px;
-  top: -124px;
+  bottom: 63px;
+  filter: saturate(180%);
   z-index: -1;
 }
 
@@ -239,7 +241,7 @@ main {
 
 .right-display-disc:hover {
   background-image: radial-gradient(
-    rgb(176, 200, 154, 0.4) 0%,
+    rgb(176, 200, 154, 0.1) 0%,
     rgb(255, 255, 255) 100%
   );
   box-shadow: 0 0 20px rgb(193, 216, 172);

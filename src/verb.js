@@ -5,7 +5,7 @@ function displayTemperature(response) {
   let temperature = Math.round(response.data.temperature.current);
   displayTemp.innerHTML = temperature;
   let icon = document.querySelector("#present-temperature-icon");
-  icon.innerHTML = response.data.condition.icon_url;
+  icon.innerHTML = `<img src="${response.data.condition.icon_url}" id="present-temperature-icon"/>`;
   let conditions = document.querySelector("#present-conditions");
   conditions.innerHTML = response.data.condition.description;
   let humidity = document.querySelector("#present-humidity");
